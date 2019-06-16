@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClassesAndObjects/TheNameOfYourClass.swift"
+            timestampString = "582311826.022463"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_3ECF1F9A39C1A8E0B3935E98E9DC8F51_func0"
+                  moduleName = "ClassesAndObjects"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Eric/Desktop/KWK2019Lessons/ClassesAndObjects/ClassesAndObjects/TheNameOfYourClass.swift"
+                  timestampString = "582311786.832489"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClassesAndObjects.newScholar1.unsafeMutableAddressor : ClassesAndObjects.Scholar1"
+                  moduleName = "ClassesAndObjects"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Eric/Desktop/KWK2019Lessons/ClassesAndObjects/ClassesAndObjects/TheNameOfYourClass.swift"
+                  timestampString = "582311786.84551"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
