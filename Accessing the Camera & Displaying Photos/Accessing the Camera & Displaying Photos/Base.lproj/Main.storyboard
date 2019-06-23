@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Accessing_the_Camera___Displaying_Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2B-2M-DWw">
+                                <rect key="frame" x="233" y="713" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a Selfie"/>
+                                <connections>
+                                    <action selector="takeSelfieTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htj-bh-8gR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99d-qc-zcu">
+                                <rect key="frame" x="764" y="713" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose From Library"/>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oI7-kb-okI"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f549c386d0d356c8b3ad20a2ea015521-rangefinder-camera-cartoon-by-vexels" translatesAutoresizingMaskIntoConstraints="NO" id="TAY-Xb-KmC">
+                                <rect key="frame" x="20" y="40" width="1072" height="594"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TAY-Xb-KmC" secondAttribute="bottom" constant="200" id="7qz-CT-cQc"/>
+                            <constraint firstItem="TAY-Xb-KmC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GY7-mI-lP7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TAY-Xb-KmC" secondAttribute="trailing" constant="20" id="c2j-da-fLI"/>
+                            <constraint firstItem="TAY-Xb-KmC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wxz-Jm-ZKm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="newImage" destination="TAY-Xb-KmC" id="0UX-cf-Xh1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.733812949640289" y="126.61870503597123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="f549c386d0d356c8b3ad20a2ea015521-rangefinder-camera-cartoon-by-vexels" width="512" height="512"/>
+    </resources>
+</document>
