@@ -22,11 +22,17 @@
                                 <rect key="frame" x="541" y="196" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="😃"/>
+                                <connections>
+                                    <action selector="showMessagesWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w0y-5K-SAq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-ZU-gZm">
                                 <rect key="frame" x="541" y="402" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="😢"/>
+                                <connections>
+                                    <action selector="showMessagesWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SM8-ZP-B3F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2827351092" green="1" blue="0.49194300530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
