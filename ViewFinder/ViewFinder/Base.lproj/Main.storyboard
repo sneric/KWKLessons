@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--ViewFinder-->
         <scene sceneID="JG1-pz-9cu">
             <objects>
                 <tableViewController id="zAk-yM-Zrg" sceneMemberID="viewController">
@@ -32,11 +33,34 @@
                             <outlet property="delegate" destination="zAk-yM-Zrg" id="nWQ-zq-c9A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="sn3-lo-cD8"/>
+                    <navigationItem key="navigationItem" title="ViewFinder" id="sn3-lo-cD8">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="B8U-J5-kgk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hJa-Av-gsK">
+                            <connections>
+                                <segue destination="8Kd-S2-DHU" kind="show" id="AFY-Y4-ZVB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU6-FA-i6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="864.92805755395682" y="121.58273381294966"/>
+        </scene>
+        <!--Add New Photo-->
+        <scene sceneID="9xM-Xj-zKG">
+            <objects>
+                <viewController id="8Kd-S2-DHU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o0h-Jy-Nzf">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dbS-YD-JmT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Photo" id="bsX-No-MbQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tW-cb-VF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1547" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gi1-kO-CmT">
