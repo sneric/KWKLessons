@@ -40,6 +40,31 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func savePhotoTapped(_ sender: UIButton) {
+   
+            if let context = (UIApplication.shared.delegate as?AppDelegate)?.persistentContainer.viewContext {
+                
+                let newCDPhoto = Photos(entity: Photos.entity(), insertInto: context)
+                
+                newCDPhoto.caption = captionText.text
+                
+                // use name for .image from button outlet at top of screen
+                if let userImage = newImage.image {
+                    
+                if let userImageData = userImage.pngData() {
+                        newCDPhoto.imageData = userImageData
+                }
+            }
+                //update all of this in core data
+                    (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                
+                    //send us to table with pic and text saved
+                    navigationController?.popViewController(animated: true)
+        }
+        }
+    
       // iteration 1
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // iteration 1

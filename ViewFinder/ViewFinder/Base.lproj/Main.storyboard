@@ -13,7 +13,7 @@
         <!--ViewFinder-->
         <scene sceneID="JG1-pz-9cu">
             <objects>
-                <tableViewController id="zAk-yM-Zrg" sceneMemberID="viewController">
+                <tableViewController id="zAk-yM-Zrg" customClass="PhotoTableTableViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XIh-ZY-t7E">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,9 @@
                                 <rect key="frame" x="503" y="637" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save this photo"/>
+                                <connections>
+                                    <action selector="savePhotoTapped:" destination="8Kd-S2-DHU" eventType="touchUpInside" id="N7G-eG-dEo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
