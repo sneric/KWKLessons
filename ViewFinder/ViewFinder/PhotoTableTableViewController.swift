@@ -28,6 +28,22 @@ class PhotoTableTableViewController: UITableViewController {
         getPhotos()
     }
     
+    // iteration 3
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "moveToDetail", sender: photos[indexPath.row])
+    }
+        // iteration 3
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "moveToDetail" {
+                if let photoDetailView = segue.destination as? PhotoDetailViewController {
+                    
+                    if let photoToSend = sender as? Photos {
+                        photoDetailView.photo = photoToSend
+                    }
+                }
+            }
+        }
+    
     func getPhotos(){
         
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
