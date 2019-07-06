@@ -11,19 +11,34 @@ import UIKit
 class ToDoListTableViewController: UITableViewController {
 
     // iteration 1
-    var toDos : [ToDo] = []
+    //var toDos : [ToDo] = []
+    
+    //iteration 2
+    var toDos : [ToDoCD] = []
+    
+    func getToDos() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            if let coreDataToDos = try?context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+                toDos = coreDataToDos
+                tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+         super.viewDidLoad()
     // iteration 1
-    toDos = createToDos()
+   // toDos = createToDos()
         
+    //iteration 2
+      
     }
 
     // MARK: - Table view data source
 
     // iteration 1
-
+/*
     func createToDos() -> [ToDo] {
         
         let swift = ToDo()
@@ -35,7 +50,7 @@ class ToDoListTableViewController: UITableViewController {
         
         return [swift, dog]
     }
-
+*/
    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -55,13 +70,21 @@ class ToDoListTableViewController: UITableViewController {
         
         let toDo = toDos[indexPath.row]
         
-        if toDo.important {
-            cell.textLabel?.text = "❗️" + toDo.name
+        //iteration 2
+        if let name = toDo.name {
+            if toDo.important {
+            cell.textLabel?.text = "❗️" + name
         } else {
             cell.textLabel?.text = toDo.name
         }
+        }
+        
 
         return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getToDos()
     }
 
 
@@ -110,7 +133,8 @@ class ToDoListTableViewController: UITableViewController {
         }
         
         if let completeVC = segue.destination as? CompleteToDoViewController {
-            if let toDo = sender as? ToDo {
+         //   if let toDo = sender as? ToDo {
+             if let toDo = sender as? ToDoCD {
                 completeVC.selectedToDo = toDo
                 completeVC.previousVC = self
             }
