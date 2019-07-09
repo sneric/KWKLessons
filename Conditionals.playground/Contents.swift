@@ -1,5 +1,49 @@
 import UIKit
 
+5 < 3
+
+var dogName = 4
+
+if dogName == 3 {
+    print("yay!")
+}
+
+if dogName != 3 {
+    print("no!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // CONDITIONALS
 
 //Turn and Talk
@@ -39,6 +83,10 @@ if dogAge < 2 {
     print("You are a puppy 🐶")
 }
 
+if dog < 2 {
+    print("You have a puppy 😃")
+}
+else if
 //else if and else
 
 if dogAge < 2 {

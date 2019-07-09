@@ -1,89 +1,106 @@
 import UIKit
 
-//Arrays
-//Arrays are useful whenever you need to keep track of an ordered list of things. This is similar to how we keep track of lists in the real world.
+// ---- Arrays
+// --- Arrays are useful whenever you need to keep track of an ordered list of things. This is similar to how we keep track of lists in the real world.
 
-//Initialize an empty array
 
+// ---- Initialize an empty array for Strings and Integars
+var arrayOfInt = [Int]()
 var arrayOfStrings = [String]()
-var arrayOfIntegers = [Int]()
 
-//Accessing Array index
 
-var friendsOfKarlie = ["Michelle Obama", "Serena Williams", "T Swift", "Jimmy Fallon"]
 
-friendsOfKarlie[0]
 
-// update a piece of the array
 
-friendsOfKarlie[2] = "Josh Kushner"
 
-//Add information to the array
 
-friendsOfKarlie.append("Jay Z")
+// ---- Accessing Array index
 
-//Remove information from the array
+var friendsOfKarlie = ["Michelle Obama", "Serena Williams", "T Swift", "Jimmy Fallon", "Eric Smith"]
 
-friendsOfKarlie.remove(at: 3)
+// ---- update a piece of the array
 
-//Try It: Creating Arrays and Accessing Data
-//Create an array of 3 of your role models and/or friends, and store it in a variable. Then, take these steps:
+friendsOfKarlie[4] = "Marnie"
+friendsOfKarlie
+
+
+
+// ---- Add information to the array using append
+friendsOfKarlie.append("John Mayer")
+
+
+// ---- Remove information from the array
+friendsOfKarlie.remove(at: 0)
+
+
+// ---- Try It: Creating Arrays and Accessing Data
+
+// ---- Create an array of 3 of your role models and/or friends, and store it in a variable. Then, take these steps:
 
 var friends = ["John", "Maggie", "Rebecca"]
 
-//Access the second person using [] notation
+// ----- Access the second person using [] notation
 
 friends[1]
 
-//Add another person to the list
+// ----- Add another person to the list
 
 friends.append("Robert")
 
-//Change one of the people
+// ----- Change one of the people
 
 friends[0] = "Rachel"
 
-//Remove the person from the array
+// ----- Remove the person from the array
 
 friends.remove(at: 3)
 
-//Iterating Over Elements in an Array Example
+// ----- Iterating Over Elements in an Array Example
 
 var friendsOfKarlie1 = ["Michelle Obama", "Serena Williams", "T Swift", "Jimmy Fallon"]
 
-for friend in friendsOfKarlie1 {
-    print("👋 Hello \(friend)!")
+for thing in friendsOfKarlie1 {
+    print("Hi \(thing)!")
 }
 
-//Practice: Arrays
 
-//Part 1: Hobbies
 
-//Create an array of your top five favorite hobbies
+for friend in friendsOfKarlie1 {
+    print("hi \(friend)!")
+}
+
+
+
+// ---- Practice: Arrays
+
+// ---- Part 1: Hobbies
+
+// ----- Create an array of your top five favorite hobbies
 
 var hobbies = ["Skiing", "Yoga", "Cooking", "Drumming", "Swimming"]
 
-//Change at least one of the values in the array
+// ----- Change at least one of the values in the array
 
 hobbies[0] = "Scuba Diving"
 
-//Add a new hobby to the array
+// ------ Add a new hobby to the array
 
 hobbies.append("Sledding")
 
-//Remove the second hobby from the array
+// ------ Remove the second hobby from the array
 
 hobbies.remove(at: 1)
 
-//Print the value of the third element of the array
+// ------ Print the value of the third element of the array
 
 print(hobbies[2])
 print(hobbies)
-//You should have five hobbies in your array. Using a for-in loop and string interpolation, iterate over the values in your array in order to print five strings that say "I love ______!"
+// ----- You should have five hobbies in your array. Using a for-in loop and string interpolation, iterate over the values in your array in order to print five strings that say "I love ______!"
 
 for hobby in hobbies {
     print("I love \(hobby)")
 }
+
 
 //// DICTIONARIES
 //Try It: Array or Dictionary?
@@ -99,30 +116,46 @@ for hobby in hobbies {
 //Create a dictionary with a list of 3 people (yourself, family, friends, or other students here!) and their birthdays.
 //Use print() statements to verify your syntax is correct.
 
-var people1 : [String : String] = [:]
+// initialize your dictionary for family:
 
-people1 = [
-    "Eric" : "December 13",
-    "Maggi" : "August 2",
-    "Madeleine" : "June 30"
-    ]
-print(people1)
+var people : [String : String] = [:]
 
-var people2 : [String : String] = [:]
 
-people2["Apple"] = "Green"
-people2["Banana"] = "Yellow"
-people2["Orange"] = "Orange"
-print(people2)
+// create dictionary
+
+var family = [
+    "Uncle" : "Richard",
+    "Aunt" : "Michelle",
+    "Sister" : "Madeleine",
+    "Mom" : "Suzanne"
+]
+
+// print dictionary
+print(family)
+
+// intialize new dictionary
+var fruitColors : [String : String] = [:]
+
+fruitColors["Apple"] = "Green"
+fruitColors["Banana"] = "Yellow"
+fruitColors["Orange"] = "Orange"
+
+print(fruitColors)
+
 
 //To tell Swift we are sure there is data, we do something called unwrapping - by typing an exclamation point after the closing bracket.
 
-print(people2["Apple"]!)
-print(people2["Orange"]!)
+print(fruitColors["Apple"]!)
+print(fruitColors["Orange"]!)
 
 //Set value to nil
-people2["Banana"]
-people2["Banana"] = nil
+fruitColors["Banana"]
+fruitColors["Banana"] = nil
+print(fruitColors)
+
+
+
+
 //print(people2["Banana"]!)
 
 print(people2.keys)
