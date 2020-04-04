@@ -1,0 +1,28 @@
+/* Spicy Challenge: Write a function that takes in one argument, a string. 
+If the string is "happy", output a randomly generated sentence about being happy. 
+If the string is "ok", output a randomly generated sentence about being ok. 
+If the string is "sad", output a randomly generated sentence to cheer someone up. 
+You will need to use a function, conditional, multiple arrays, and have to generate a random number.
+*/
+
+func mood(feeling: String){
+    var random = Int.random(in: 0..<3)
+    var happyWords = ["excited","hopeful","great"]
+    var okWords = ["feel better","feel happy soon","cheer up"]
+    var sadWords = ["Don't give up","You got this","You're awesome"]
+    
+    if feeling == "Happy"{
+        print("I am feeling \(happyWords[random])!")
+    }
+    else if feeling == "Ok" {
+        print("I hope you \(okWords[random])!")
+    }
+    else {
+        print("\(sadWords[random])!")
+    }
+}
+mood(feeling: "Happy")
+mood(feeling: "Ok")
+mood(feeling: "Sad")
+
+
