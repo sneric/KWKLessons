@@ -1,0 +1,38 @@
+/* Practice: Dictionaries
+Create an dictionary with keys that are family or friend titles (i.e. "sister", "bestFriend"), and values that are the name of that family member or friend. Pets are family, too!
+
+Aim to have at least 6 family members of friends in your 'tree'
+Print to the console the entire dictionary
+Print to the console 3 individual names */
+
+
+var family : [String : String] = [:]
+print(family)
+
+family = ["Sister" : "Maddy", "Mom": "Suzzy"]
+
+print(family)
+print(family.keys)
+print(family.values)
+print(family["Sister"]!)
+
+/*Try It: Looping over Dictionaries
+Create a dictionary of 3+ key/value pairs, where the keys are names of cities, and the values hold the distance between that city and your location (you'll need to do some research! You choose the cities!)
+
+Write a for-in loop that uses each city and distance and prints You are currently ___ miles away from _____..
+
+Spicy Challenge: Building on your code from the bullet points above, print out custom sentences based on the distance. If you are within 100 miles, print You are currently only ___ miles away from _____.. If you are more than 100 miles, print WOW! You are ___ miles away from _____.*/
+
+var locations = ["Hong Kong" : 7994, "Chicago" : 697, "Austin" : 80]
+
+for (city, distance) in locations {
+    if distance <= 100 {
+        print("You are currently only \(distance) miles away from \(city)!")
+    }   else if distance > 100 {
+        print("You are more than \(distance) miles away from \(city)!")
+    }  else {
+        print("COOL")
+    }
+}
+
+
